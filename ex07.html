@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+    <script>
+        window.onload = function(){
+            let add = document.querySelector('.add');
+            let result = 1+2;
+            add.innerHTML = '1+2='+result;
+            let sub = document.querySelector('.sub');
+            result = 1-2;
+            sub.innerHTML = '1-2='+result;
+            let mul = document.querySelector('.mul');
+            result = 1*2;
+            mul.innerHTML = '1*2='+result;
+            let div = document.querySelector('.div');
+            result = 1/2;
+            div.innerHTML = '1/2='+result;
+            let pow = document.querySelector('.pow');
+            result = 1**2;
+            pow.innerHTML = '1**2='+result;
+        }
+    </script>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2 class="add"></h2>
+    <h2 class="sub"></h2>
+    <h2 class="mul"></h2>
+    <h2 class="div"></h2>
+    <h2 class="pow"></h2>
+</body>
+</html>

@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연산자</title>
-    <script>
-        window.onload = function(){
-            let add = document.querySelector('.add');
-            let result = 1+2;
-            add.innerHTML = '1+2='+result;
-            let sub = document.querySelector('.sub');
-            result = 1-2;
-            sub.innerHTML = '1-2='+result;
-            let mul = document.querySelector('.mul');
-            result = 1*2;
-            mul.innerHTML = '1*2='+result;
-            let div = document.querySelector('.div');
-            result = 1/2;
-            div.innerHTML = '1/2='+result;
-            let pow = document.querySelector('.pow');
-            result = 1**2;
-            pow.innerHTML = '1**2='+result;
-        }
-    </script>
+    <title>연산자연습</title>
+    <style>
+        .wrap{
+            width:300px;
+            margin:20px auto;
+            border:2px solid black;
+            padding:12px;
+
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-auto-rows:50px;
+            gap:12px;
+        } 
+        input{
+            grid-column: 1/5;
+            font-size:32px;
+            text-align:right;
+        }      
+    </style>
 </head>
 <body>
-    <h1>연산자</h1>
-    <h2 class="add"></h2>
-    <h2 class="sub"></h2>
-    <h2 class="mul"></h2>
-    <h2 class="div"></h2>
-    <h2 class="pow"></h2>
+    <div class="wrap">
+        <input type="text" id="result" placeholder="0">
+        <button type="button">+</button>
+        <button type="button">-</button>
+        <button type="button">*</button>
+        <button type="button">/</button>
+        <button type="button">9</button>
+        <button type="button">8</button>
+        <button type="button">7</button>
+        <button type="button">6</button>
+        <button type="button" id="number5" onclick="
+            let number5 = document.querySelector('#number5').innerHTML;
+            let result = document.querySelector('#result');
+            // result.value += number5;
+            result.value = result.value + number5;
+        ">5</button>
+        <button type="button">4</button>
+        <button type="button">3</button>
+        <button type="button">2</button>
+        <button type="button">1</button>
+        <button type="button">0</button>
+        <button type="button">.</button>
+        <button type="button">=</button>        
+    </div>
 </body>
 </html>

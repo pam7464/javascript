@@ -94,9 +94,42 @@
                 <div class="slide slide05"><img src="./images/img05.jpg" alt="slide05"></div>
             </div>
             <div class="navigation">
-                <div class="prev">이전</div>
+                <div class="prev" onclick="
+                    let _slide = document.getElementsByClassName('slide');
+                    let _span = document.getElementsByTagName('span');
+                    if(indexNum<=0){
+                        _slide[0].classList.remove('active');                    
+                        _slide[4].classList.add('active');
+                        _span[0].classList.remove('active');
+                        _span[4].classList.add('active');
+                        indexNum=4;
+                    }else{
+                        _slide[indexNum--].classList.remove('active');                    
+                        _slide[indexNum].classList.add('active');
+                        _span[++indexNum].classList.remove('active');
+                        _span[--indexNum].classList.add('active');
+                    }
+                    
+                ">이전</div>
                 <div class="next" onclick="
-                
+                    let _slide = document.getElementsByClassName('slide');
+                    let _span = document.getElementsByTagName('span');
+                    
+                    if(indexNum>=4){
+                        _slide[4].classList.remove('active');                    
+                        _slide[0].classList.add('active');
+                        _span[4].classList.remove('active');
+                        _span[0].classList.add('active');
+                        indexNum = 0 ;
+                    }else{
+                        _slide[indexNum++].classList.remove('active');                    
+                        _slide[indexNum].classList.add('active');
+                        _span[--indexNum].classList.remove('active');
+                        _span[++indexNum].classList.add('active');
+                    }
+                    
+
+
                 ">다음</div>
             </div>
             <div class="pager">
@@ -168,7 +201,7 @@
         </div>
     </div>
     <script>
-
+        let indexNum = 0;
     </script>
 </body>
 </html>

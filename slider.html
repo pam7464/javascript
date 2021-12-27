@@ -45,9 +45,17 @@
             left:0;
             right:0;
             top:50%;
-            transform:translateY(-50%);
-
-            background-color:red;
+            transform:translateY(-50%);  
+            
+            display:flex;
+            justify-content:space-between;
+        }
+        .navigation div{
+            margin:0 20px;
+            font-weight:900;
+            font-size:24px;
+            text-shadow:1px 1px 1px #fff;;
+            cursor: pointer;
         }
         .pager{
             position:absolute;
@@ -87,7 +95,9 @@
             </div>
             <div class="navigation">
                 <div class="prev">이전</div>
-                <div class="next">다음</div>
+                <div class="next" onclick="
+                
+                ">다음</div>
             </div>
             <div class="pager">
                 <span class="active" onclick="

@@ -24,13 +24,13 @@
         let _btn = document.getElementById('btn');
 
         _btn.addEventListener('click',function(){
-            if(inData.value>=0 && inData.value<=59){
+            if(inData.value<=59){
                 outInfo.value="재시험";
-            }else if(inData.value>=60 && inData.value<=69){
+            }else if(inData.value<=69){
                 outInfo.value="D";
-            }else if(inData.value>=70 && inData.value<=79){
+            }else if(inData.value<=79){
                 outInfo.value="C";
-            }else if(inData.value>=80 && inData.value<=89){
+            }else if(inData.value<=89){
                 outInfo.value="B";
             }else{
                 outInfo.value="A";

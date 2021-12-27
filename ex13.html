@@ -15,38 +15,42 @@
         let _btn =  document.getElementById('btn');
 
         _btn.onclick = function(){
-            switch(_input.value){
-                case 'naver': 
-                    location.href='https://www.naver.com';
-                    break;
-                case '네이버': 
-                    location.href='https://www.naver.com';
-                    break;
-                case 'google': 
-                    location.href='https://www.google.com';
-                    break;
-                case '구글': 
-                    location.href='https://www.google.com';
-                    break;
-                case 'daum': 
-                    location.href='https://www.daum.net';
-                    break;
-                case '다음': 
-                    location.href='https://www.daum.net';
-                    break;
-                default:
-                    alert('해당 URL은 지원하지 않습니다.');
-                    _input.value='';
-                    _input.focus();
-                    break;
-            }
-        //    if(_input.value=='네이버' || _input.value=='naver') {
-        //        location.href='https://www.naver.com';
-        //    }else if(_input.value=='구글' || _input.value=='google') {
-        //        location.href='https://www.google.com';
-        //    }else if(_input.value=='다음' || _input.value=='daum'){
-        //     location.href='https://www.daum.net';
-        //    }
+            // switch(_input.value){
+            //     case 'naver': 
+            //         location.href='https://www.naver.com';
+            //         break;
+            //     case '네이버': 
+            //         location.href='https://www.naver.com';
+            //         break;
+            //     case 'google': 
+            //         location.href='https://www.google.com';
+            //         break;
+            //     case '구글': 
+            //         location.href='https://www.google.com';
+            //         break;
+            //     case 'daum': 
+            //         location.href='https://www.daum.net';
+            //         break;
+            //     case '다음': 
+            //         location.href='https://www.daum.net';
+            //         break;
+            //     default:
+            //         alert('해당 URL은 지원하지 않습니다.');
+            //         _input.value='';
+            //         _input.focus();
+            //         break;
+            // }
+           if(_input.value=='네이버' || _input.value=='naver') {
+               location.href='https://www.naver.com';
+           }else if(_input.value=='구글' || _input.value=='google') {
+               location.href='https://www.google.com';
+           }else if(_input.value=='다음' || _input.value=='daum'){
+                location.href='https://www.daum.net';
+           }else{
+                alert('해당 URL은 지원하지 않습니다.');
+                _input.value='';
+                _input.focus();
+           }
         }
     </script>
 </body>

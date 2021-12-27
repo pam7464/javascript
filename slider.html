@@ -34,7 +34,11 @@
             position:absolute;
             left:0;
             top:0;
-            z-index:0;
+            opacity:0;
+            transition:0.3s;
+        }
+        .slide.active{
+            opacity:1;
         }
         .navigation{
             position:absolute;
@@ -42,7 +46,6 @@
             right:0;
             top:50%;
             transform:translateY(-50%);
-            z-index:2;
 
             background-color:red;
         }
@@ -51,7 +54,6 @@
             left:0;
             right:0;
             bottom:40px;
-            z-index:2;
 
             display:flex;
             flex-flow:row nowrap;
@@ -65,10 +67,11 @@
             background-color:#000;
             text-indent:-99999px;
             cursor:pointer;
-        }
-        .pager span:first-child{
+            transition:0.3s;
+        } 
+        .pager span.active{
             background-color:#f00;
-        }
+        }       
     </style>
 </head>
 <body>
@@ -76,7 +79,7 @@
         <h1>slider</h1>
         <div class="slider">
             <div class="slides">
-                <div class="slide slide01"><img src="./images/img01.jpg" alt="slide01"></div>
+                <div class="slide slide01 active"><img src="./images/img01.jpg" alt="slide01"></div>
                 <div class="slide slide02"><img src="./images/img02.jpg" alt="slide02"></div>
                 <div class="slide slide03"><img src="./images/img03.jpg" alt="slide03"></div>
                 <div class="slide slide04"><img src="./images/img04.png" alt="slide04"></div>
@@ -87,69 +90,74 @@
                 <div class="next">다음</div>
             </div>
             <div class="pager">
-                <span onclick="
+                <span class="active" onclick="
                     let _span = document.getElementsByTagName('span');
+                    let _slide = document.getElementsByClassName('slide');
                     let cnt = 0;
                     while(cnt<=4){
-                        _span[cnt].style.backgroundColor = '#000';
-                        _slide[cnt].style.zIndex = '0';
+                        _span[cnt].classList.remove('active');
+                        _slide[cnt].classList.remove('active');
                         cnt++;
-                    }   
-                    _span[0].style.backgroundColor = '#f00' 
-                    _slide[0].style.zIndex = '1' ;
-                    
+                    }
+                    _span[0].classList.add('active');
+                    _slide[0].classList.add('active');
                 ">1</span>
                 <span onclick="
                     let _span = document.getElementsByTagName('span');
+                    let _slide = document.getElementsByClassName('slide');
+
                     let cnt = 0;
                     while(cnt<=4){
-                        _span[cnt].style.backgroundColor = '#000';
-                        _slide[cnt].style.zIndex = '0';
+                        _span[cnt].classList.remove('active');
+                        _slide[cnt].classList.remove('active');
                         cnt++;
-                    }   
-                    _span[1].style.backgroundColor = '#f00';                 
-                    _slide[1].style.zIndex = '1';
+                    }
+                    _span[1].classList.add('active');
+                    _slide[1].classList.add('active');
                 ">2</span>
                 <span onclick="
                     let _span = document.getElementsByTagName('span');
+                    let _slide = document.getElementsByClassName('slide');
+
                     let cnt = 0;
                     while(cnt<=4){
-                        _span[cnt].style.backgroundColor = '#000';
-                        _slide[cnt].style.zIndex = '0';
+                        _span[cnt].classList.remove('active');
+                        _slide[cnt].classList.remove('active');
                         cnt++;
-                    }   
-                    _span[2].style.backgroundColor = '#f00';  
-                    _slide[2].style.zIndex = '1';               
+                    }
+                    _span[2].classList.add('active');
+                    _slide[2].classList.add('active');
                 ">3</span>
                 <span onclick="
                     let _span = document.getElementsByTagName('span');
+                    let _slide = document.getElementsByClassName('slide');
+
                     let cnt = 0;
                     while(cnt<=4){
-                        _span[cnt].style.backgroundColor = '#000';
-                        _slide[cnt].style.zIndex = '0';
+                        _span[cnt].classList.remove('active');
+                        _slide[cnt].classList.remove('active');
                         cnt++;
-                    }   
-                    _span[3].style.backgroundColor = '#f00';
-                    _slide[3].style.zIndex = '1';                    
+                    }
+                    _span[3].classList.add('active');
+                    _slide[3].classList.add('active');
                 ">4</span>
                 <span onclick="
                     let _span = document.getElementsByTagName('span');
+                    let _slide = document.getElementsByClassName('slide');
+
                     let cnt = 0;
                     while(cnt<=4){
-                        _span[cnt].style.backgroundColor = '#000';
-                        _slide[cnt].style.zIndex = '0';
+                        _span[cnt].classList.remove('active');
+                        _slide[cnt].classList.remove('active');
                         cnt++;
-                    }   
-                    _span[4].style.backgroundColor = '#f00';
-                    _slide[4].style.zIndex = '1';                   
+                    }
+                    _span[4].classList.add('active');
+                    _slide[4].classList.add('active');
                 ">5</span>
             </div>
         </div>
     </div>
     <script>
-        let _slide = document.getElementsByClassName('slide');
-        _slide[0].style.zIndex = '1';
-
 
     </script>
 </body>

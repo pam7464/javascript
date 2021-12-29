@@ -1,0 +1,4 @@
+객체,개체(Object)
+1. 내장개체(String(), Array(), Date(), Math())
+2. 브라우저 개체 모델(window,location,document,history,navigator,screen)=BOM
+3. 문서개체모델(document)=DOM

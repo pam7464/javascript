@@ -1,0 +1,13 @@
+window개체 
+window.open('주소','대상/이름','옵션') => 창오픈/창변경
+window.setInterval(function(){코드},time); => time마다 코드반복
+window.clearInterval(setInterval); => setInterval 종료
+window.setTimeout(function(){코드},time); => time후 코드실행
+window.clearTimeout(setTimeout); => setTimeout 종료
+window.alert('이것은 알림(alert)창입니다.'); => 단순 알림창
+window.prompt('이것은 입력(prompt)창입니다.'); => 입력창
+window.console.log('prompt의 결는 : ' + tmp);=> 콘솔 출력
+window.confirm('이것은 확인(confirm)창입니다.'); =>확인창
+윈도우명.moveTo(x,y); => 원도우 좌표
+윈도우명.resizeTo(x,y); => 원도우 크기
+

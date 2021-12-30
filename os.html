@@ -49,6 +49,7 @@
             height:16px;
             border-radius:8px;
             background-color:#aaa;
+            transition:0.3s;
         }
         .ios>span>span{
             position:absolute;
@@ -60,6 +61,14 @@
             border-radius:50%;
             background-color:green;
             transition:0.3s;
+        }
+        
+        .chk:checked+.ios>span{
+            background-color:green;
+        }
+        .chk:checked+.ios>span>span{
+            left:calc(100% - 16px);
+            background-color: #fff;
         }
     </style>
 </head>
@@ -88,20 +97,23 @@
     </div>
     
     <script>
+        let chkBox = document.getElementById('andos');
+        let iOxBox = document.getElementById('ios');
+        console.log(chkBox);
+        console.log(iOxBox);
+
+
         let uAgent = navigator.userAgent;
         console.log(typeof uAgent);
         uAgent = uAgent.toLowerCase();
         console.log(uAgent);
-        if(uAgent.indexOf('windows')>=0){
-            // document.write('windows OS');
-        }else if(uAgent.indexOf('iphone')>=0){
-            // document.write('iphone OS');
-        }else if(uAgent.indexOf('android')>=0){
-            // document.write('android OS');
+        if(uAgent.indexOf('windows')>=0 || uAgent.indexOf('android')>=0){
+            iOxBox.style.display='none';
+            chkBox.style.display='inline-block';
         }else{
-            // document.write('알수없는 OS');
+            iOxBox.style.display='inline-block';
+            chkBox.style.display='none';
         }
-        // document.write(navigator.userAgent);
     </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 location 개체
 
-location.href => url조회/설정
+location.href => url조회/설정(히스토리 등록)
+location.replace(url) => url설정(히스토리 대체)
 location.reload() => 새로고침
 location.hash =>url #(해시) 조회
 location.hostname =>도메인 조회

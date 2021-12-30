@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+</head>
+<body>
+    <h1>사용자 정의 객체</h1>
+
+    <script>
+        let personInfo = {
+            name:'조환준',
+            age:20,
+            address:'경기 부천시 어딘가',
+            phoneNum:'010-8718-9994',
+            tmp:function(self){
+                if(self=='hi'){
+                    console.log('안녕');
+                }else if(self=='안녕'){
+                    console.log('hi');
+                }                
+            },
+            pi:3.1415971285624,
+            power:function(self){
+                return self*self;
+            }
+        }
+
+
+        personInfo.tmp('hi');
+
+
+        console.log('나의 이름은 : ' + personInfo.name);
+        personInfo.phoneNum = '010-9718-9458';
+        console.log('나의 전화번호는 : ' + personInfo.phoneNum);
+        personInfo.tmp('안녕');
+
+        console.log(5*5*Math.PI);
+        console.log(5*5*personInfo.pi);
+
+        console.log(Math.pow(5,2));
+        console.log(personInfo.power(5));
+
+    </script>
+</body>
+</html>

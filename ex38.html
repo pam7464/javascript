@@ -86,7 +86,12 @@
         // _btn01[0].remove();
         //   버튼2 자식삭제
         // _btn02[0].removeChild(_btn02[0].children[0]);
+
+        console.log(_btn01[0].getAttribute('class'));
+        _btn01[0].removeAttribute('class');
+        document.body.children[0].setAttribute('class','btn01');
         
+
         
     </script>
 </body>

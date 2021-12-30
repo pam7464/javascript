@@ -1,0 +1,20 @@
+location 개체
+
+location.href => url조회/설정
+location.reload() => 새로고침
+location.hash =>url #(해시) 조회
+location.hostname =>도메인 조회
+location.host => 도메인+포트번호
+location.protocol => 프로토콜
+
+history 개체
+history.back() => 이전방문으로 이동
+history.forward() => 다음방문으로 이동
+history.go(number) => 이전/다음방문으로 이동
+history.length => 히스토리 개수
+
+
+
+
+
+

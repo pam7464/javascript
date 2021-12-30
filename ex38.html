@@ -22,6 +22,7 @@
             height:20px;
             border-radius: 10px;
             background-color:#000;
+            transform-origin:left top;
             transition: 0.5s;
         }
         .btn01::before,.btn01::after{
@@ -53,12 +54,40 @@
         <div class="line"></div>
     </div>
     <script>
+
         let _btn01 = document.getElementsByClassName('btn01');
-        console.log(_btn01);
+        let _btn02 = document.getElementsByClassName('btn02');
+
+        // 가상요소의 회전
         _btn01[0].onclick = function(){
             _btn01[0].classList.toggle('active');
         }
 
+        //자식요소 삽입
+        for(let cnt=0;cnt<2;cnt++){
+            let line1 = document.createElement('div');
+            // line1.createTextNode('line');
+            line1.setAttribute('id','line' + cnt);
+            line1.setAttribute('class','line');
+            _btn02[0].appendChild(line1);
+
+        }
+
+        // 버튼2 회원 이벤트
+        _btn02[0].addEventListener('click',function(){
+            _btn02[0].children[0].style.transform = 'rotate(45deg)';
+            _btn02[0].children[0].style.width = '260px';
+            _btn02[0].children[1].style.width = '0';
+            _btn02[0].children[2].style.transform = 'rotate(-45deg)';
+            _btn02[0].children[2].style.width = '260px';
+        });
+        
+        //   버튼1 삭제
+        // _btn01[0].remove();
+        //   버튼2 자식삭제
+        // _btn02[0].removeChild(_btn02[0].children[0]);
+        
+        
     </script>
 </body>
 </html>

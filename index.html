@@ -31,19 +31,21 @@
 <body>
     <h1><a href="./index.html">WEB</a></h1>
     <button onclick="
+        inText(this);
         bodyBgColor('#000');
         aTagColor('lightblue');
         buttonColor('2px solid #fff','#000','#fff');        
         h2Color('#fff');
         pTagColor('#ccc');
     ">NIGHT</button>
-    <button onclick="
+    <!-- <button onclick="
+        inText(this);
         bodyBgColor('#fff');
         aTagColor('darkblue');
         buttonColor('2px outset rgb(118,118,118)','rgb(239, 239, 239)','#000');        
         h2Color('#000');
         pTagColor('#000');
-    ">DAY</button>
+    ">DAY</button> -->
     <ul>
         <li><a href="#" onclick="return false;">html</a></li>
         <li><a href="#" onclick="return false;">css</a></li>
@@ -65,6 +67,21 @@
     </p>
 
     <script>
+        function inText(self){
+            if(self.innerHTML == 'NIGHT'){
+                // 야간화면
+                self.innerHTML = 'DAY';
+                bodyBgColor('#000');
+                aTagColor('lightblue');
+                buttonColor('2px solid #fff','#000','#fff');
+            }else{
+                // 주간화면
+                self.innerHTML = 'NIGHT';
+
+            }
+            
+        }
+
         // 배경변경
         function bodyBgColor(color){
             let eleBody = document.body;

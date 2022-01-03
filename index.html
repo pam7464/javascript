@@ -32,14 +32,17 @@
     <h1><a href="./index.html">WEB</a></h1>
     <button onclick="
         bodyBgColor('#000');
-        let aTag = document.getElementsByTagName('a');
-        aTag[0].style.color = 'lightblue';
-        aTag[1].style.color = 'lightblue';
-        aTag[2].style.color = 'lightblue';
-        aTag[3].style.color = 'lightblue';
+        aTagColor('lightblue');
+        buttonColor('2px solid #fff','#000','#fff');        
+        h2Color('#fff');
+        pTagColor('#ccc');
     ">NIGHT</button>
     <button onclick="
         bodyBgColor('#fff');
+        aTagColor('darkblue');
+        buttonColor('2px outset rgb(118,118,118)','rgb(239, 239, 239)','#000');        
+        h2Color('#000');
+        pTagColor('#000');
     ">DAY</button>
     <ul>
         <li><a href="#" onclick="return false;">html</a></li>
@@ -62,9 +65,42 @@
     </p>
 
     <script>
+        // 배경변경
         function bodyBgColor(color){
             let eleBody = document.body;
             eleBody.style.backgroundColor = color; 
+        }
+
+        // 링크변경
+        function aTagColor(color){
+            let aTag = document.getElementsByTagName('a');
+            for(let idx=0;idx<aTag.length;idx++){
+                aTag[idx].style.color = color;
+            }
+        }
+
+        // 버튼변경
+        function buttonColor(border,bgColor,color){
+            let btnTag = document.getElementsByTagName('button');
+            for(let idx=0;idx<btnTag.length;idx++){
+                btnTag[idx].style.border = border;
+                btnTag[idx].style.backgroundColor = bgColor;
+                btnTag[idx].style.color = color;
+            }
+        }
+
+        // 서브타이틀 변경        
+        function h2Color(color){
+            let h2Tag = document.querySelector('h2');
+            h2Tag.style.color = color;
+        }
+    
+        // 본문 변경
+        function pTagColor(color){
+            let pTag = document.getElementsByTagName('p');
+            for(let idx=0;idx<pTag.length;idx++){
+                pTag[idx].style.color = color;
+            }
         }
     </script>
 </body>

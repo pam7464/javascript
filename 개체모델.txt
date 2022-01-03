@@ -1,4 +1,5 @@
-객체,개체(Object)
+객체,개체(Object) => 개체 + 메서드 + 속성(objec + property)
 1. 내장개체(String(), Array(), Date(), Math())
-2. 브라우저 개체 모델(window,location,document,history,navigator,screen)=BOM
+2. 브라우저 개체 모델(window,screen,location,history,navigator,document)=BOM
 3. 문서개체모델(document)=DOM
+4. 사용자 정의 개체

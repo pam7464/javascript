@@ -30,12 +30,21 @@
 </head>
 <body>
     <h1><a href="./index.html">WEB</a></h1>
-    <button>NIGHT</button>
-    <button>DAY</button>
+    <button onclick="
+        bodyBgColor('#000');
+        let aTag = document.getElementsByTagName('a');
+        aTag[0].style.color = 'lightblue';
+        aTag[1].style.color = 'lightblue';
+        aTag[2].style.color = 'lightblue';
+        aTag[3].style.color = 'lightblue';
+    ">NIGHT</button>
+    <button onclick="
+        bodyBgColor('#fff');
+    ">DAY</button>
     <ul>
-        <li><a href="#">html</a></li>
-        <li><a href="#">css</a></li>
-        <li><a href="#">javaScript</a></li>
+        <li><a href="#" onclick="return false;">html</a></li>
+        <li><a href="#" onclick="return false;">css</a></li>
+        <li><a href="#" onclick="return false;">javaScript</a></li>
     </ul>
     <hr>
     <h2>web이란 무엇인가?</h2>
@@ -51,5 +60,12 @@
         Natus ipsum aliquid quaerat nam voluptatibus quibusdam labore aperiam similique debitis vero provident, nemo expedita dolore adipisci, veritatis tenetur eum tempore distinctio impedit. Aliquid voluptatum dolorem consequatur officia quia quaerat.
         Blanditiis exercitationem consectetur repellat excepturi id voluptates reiciendis pariatur perspiciatis a accusamus quam tempore, odit quod, eius dignissimos, deserunt autem rerum minus aliquid incidunt. Ducimus, rerum tempora. Id, velit repellendus?
     </p>
+
+    <script>
+        function bodyBgColor(color){
+            let eleBody = document.body;
+            eleBody.style.backgroundColor = color; 
+        }
+    </script>
 </body>
 </html>
